@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+from os.path import join
 
 AUTHOR = u'Guto Maia'
 SITENAME = u'gutomaia'
@@ -30,6 +31,10 @@ SOCIAL = (('twitter', 'http://twitter.com/gutomaia'),
           ('github', 'http://github.com/gutomaia'),)
 
 DEFAULT_PAGINATION = 10
+
+
+STATIC_PATHS = ['images', join('extra', 'CNAME')]
+EXTRA_PATH_METADATA = {join('extra', 'CNAME'): {'path': 'CNAME'},}
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
