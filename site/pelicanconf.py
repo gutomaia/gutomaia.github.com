@@ -28,7 +28,9 @@ LINKS = (
 
 # Social widget
 SOCIAL = (('twitter', 'http://twitter.com/gutomaia'),
-          ('github', 'http://github.com/gutomaia'),)
+          ('github', 'http://github.com/gutomaia'),
+          ('linkedin', 'http://linkedin.com/in/gutomaia')
+          )
 
 DEFAULT_PAGINATION = 10
 
