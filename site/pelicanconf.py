@@ -34,9 +34,22 @@ SOCIAL = (('twitter', 'http://twitter.com/gutomaia'),
 
 DEFAULT_PAGINATION = 10
 
+MENUITEMS = [
+    ('1pyNES', '/pyNES'),
+    ('2nodeNES', '/nodeNES'),
+]
+
 
 STATIC_PATHS = ['images', join('extra', 'CNAME')]
 EXTRA_PATH_METADATA = {join('extra', 'CNAME'): {'path': 'CNAME'},}
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
+
+THEME = "../Flex"
+
+#Flex Theme Specific
+SITETITLE = 'gutomaia'
+SITESUBTITLE = 'Pythonist with a NES and an ☂'
+SITELOGO = 'https://s.gravatar.com/avatar/760d34405db2c028a3fb099a4510d870?s=100'
+COPYRIGHT_YEAR = 2015
