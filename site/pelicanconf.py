@@ -52,4 +52,4 @@ THEME = "../Flex"
 SITETITLE = 'gutomaia'
 SITESUBTITLE = 'Pythonist with a NES and an ☂'
 SITELOGO = 'https://s.gravatar.com/avatar/760d34405db2c028a3fb099a4510d870?s=100'
-COPYRIGHT_YEAR = 2015
+COPYRIGHT_YEAR = 2016
