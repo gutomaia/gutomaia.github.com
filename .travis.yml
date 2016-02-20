@@ -2,7 +2,7 @@ language: python
 python:
   - "2.7"
 script:
-  - make build
+  - make
 after_script:
   - make github
 sudo: false
