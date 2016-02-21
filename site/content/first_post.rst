@@ -14,7 +14,7 @@ This is not my first attempt to write a blog, nevertheless, shall be the last. H
 
 One early mistake is the actual "first post". Usually, in the content is said what's the blog is about and dictate boundaries for what readers might find. This time, I won't put any restriction. I might write about books that I'm reading, code and hacks and whatever comes in mind.
 
-My second mistake was the platform. Previous blogs were done with wordpress and a discontinued Yahoo blog platform. Neither them suited me well. The first is jungle of templates and plugins that don't get along well and the second was discontinued despite being great, what also made me avoid other platforms like tumblr and medium.
+My second mistake was the platform. Previous blogs were done with wordpress and "Meme", a discontinued Yahoo blog platform. Neither them suited me well. The first is jungle of templates and plugins that don't get along well and the second was discontinued despite being great, what also made me avoid other platforms like tumblr and medium.
 
 Third mistake, was trying to being perfect. That end up with fewer post and lots of unfinished drafts. Most of then were kept as draft due to the fear of critcism.
 
