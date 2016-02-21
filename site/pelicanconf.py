@@ -40,13 +40,15 @@ MENUITEMS = [
 ]
 
 
-STATIC_PATHS = ['images', join('extra', 'CNAME')]
-EXTRA_PATH_METADATA = {join('extra', 'CNAME'): {'path': 'CNAME'},}
+STATIC_PATHS = ['images', join('extra', 'CNAME'), join('extra', 'favicon.ico')]
+EXTRA_PATH_METADATA = {join('extra', 'CNAME'): {'path': 'CNAME'}, join('extra', 'favicon.ico'): {'path': 'favicon.ico'},}
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
 THEME = "../Flex"
+
+FAVICON = '/favicon.ico'
 
 #Flex Theme Specific
 SITETITLE = 'gutomaia'
