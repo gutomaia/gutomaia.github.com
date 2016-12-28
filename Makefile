@@ -12,7 +12,7 @@ OK=\033[32m[OK]\033[39m
 FAIL=\033[31m[FAIL]\033[39m
 CHECK=@if [ $$? -eq 0 ]; then echo "${OK}"; else echo "${FAIL}" ; fi
 
-WGET = wget -q 
+WGET = wget -q
 
 default: python.mk
 	@$(MAKE) -C . build
@@ -30,11 +30,19 @@ clean: python_clean
 purge: python_purge
 	@rm python.mk
 	@rm -rf .tox
+	@git submodule deinit Flex
 
-publish:
+Flex/templates/index.html:
+	git submodule init
+	git submodule update
+
+publish: Flex/templates/index.html
 	${VIRTUALENV} $(MAKE) -C site publish
 
 build: python_build ${REQUIREMENTS} publish
+
+serve: build
+	${VIRTUALENV} $(MAKE) -C site serve
 
 github: build
 	${VIRTUALENV} ghp-import -m "Generate Pelican site" -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIR)
