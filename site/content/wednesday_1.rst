@@ -25,8 +25,10 @@ Therefore. What to tell abount NES emulators that haven't already being told? We
 Press Start
 ===========
 
-In order to write the emulator, we need to keep up with the overall architecture that was involved. For now, let's focus on the CPU. NES had a ‎Ricoh 2A03 CPU with the same instruaction set of the 6502. Since we are talking about code. Let highlight the first code
+In order to write the emulator, we need to keep up with the overall architecture that was involved. For now, let's focus on the CPU. NES had a ‎Ricoh 2A03 CPU with the same instruaction set of the 6502. Since we are talking about code. Let highlight the code
 from Niels Widger's `Nintengo <https://github.com/nwidger/nintengo>`_. It's very polished, and more important, it's filled with tests. So as a experiment, I've rewrote the tests and used on the James Tauber's `ApplePy <https://github.com/jtauber/applepy>`_, most impressive, without mush effort, the test spec payoff, and show how well made ApplePy is.
+
+You can checkout the progress at `wedNESday repository <https://github.com/gutomaia/wedNESday>`_.
 
 Next wedNESday
 ==============
