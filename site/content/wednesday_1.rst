@@ -5,7 +5,7 @@ wedNESday #1
 :modified: 2017-01-07 23:00
 :tags: nes emulator python
 :Category: nes
-:slug: wednesday
+:slug: wednesday_1
 :authors: Guto Maia
 :sumary: write a NES emulator
 
