@@ -28,4 +28,4 @@ I will post a picture later on, when I manage (need some tweaks on the pelican t
 Next wedNESday
 ==============
 
- * How about some GUI?
+ * Don't know yet. I'll certainly have less time available this week. How about some GUI?
