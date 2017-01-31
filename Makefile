@@ -30,11 +30,12 @@ clean: python_clean
 purge: python_purge
 	@rm python.mk
 	@rm -rf .tox
-	@git submodule deinit Flex
+	@git submodule deinit -f Flex
 
 Flex/templates/index.html:
 	git submodule init
-	git submodule update
+	git submodule update --remote
+	cd Flex && git checkout v2.1.0
 
 publish: Flex/templates/index.html
 	${VIRTUALENV} $(MAKE) -C site publish
