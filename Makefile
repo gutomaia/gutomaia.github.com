@@ -35,9 +35,11 @@ purge: python_purge
 Flex/templates/index.html:
 	git submodule init
 	git submodule update --remote
-	cd Flex && git checkout v2.1.0
 
-publish: Flex/templates/index.html
+.checkpoint/flex_branch: Flex/templates/index.html
+	cd Flex && git checkout v2.1.0 && touch ../$@
+
+publish: .checkpoint/flex_branch
 	${VIRTUALENV} $(MAKE) -C site publish
 
 build: python_build ${REQUIREMENTS} publish
