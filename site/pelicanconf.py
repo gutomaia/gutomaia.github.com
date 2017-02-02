@@ -39,11 +39,17 @@ MENUITEMS = [
     ('2nodeNES', '/nodeNES'),
 ]
 
-
-STATIC_PATHS = ['images', join('extra', 'CNAME'), join('extra', 'favicon.ico'),
-                join('extra', 'robots.txt')]
-
-EXTRA_PATH_METADATA = {join('extra', 'CNAME'): {'path': 'CNAME'}, join('extra', 'favicon.ico'): {'path': 'favicon.ico'},}
+STATIC_PATHS = [
+    'images',
+    join('extra', 'CNAME'),
+    join('extra', 'favicon.ico'),
+    join('extra', 'robots.txt'),
+]
+EXTRA_PATH_METADATA = {
+    join('extra', 'CNAME'): {'path': 'CNAME'},
+    join('extra', 'favicon.ico'): {'path': 'favicon.ico'},
+    join('extra', 'robots.txt'): {'path': 'robots.txt'},
+}
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
