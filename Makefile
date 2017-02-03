@@ -39,14 +39,17 @@ Flex/templates/index.html:
 .checkpoint/flex_branch: Flex/templates/index.html
 	cd Flex && git checkout v2.1.0 && touch ../$@
 
-publish: .checkpoint/flex_branch
-	${VIRTUALENV} $(MAKE) -C site publish
+html: .checkpoint/flex_branch
+	${VIRTUALENV} $(MAKE) -C site html
 
-build: python_build ${REQUIREMENTS} publish
+build: python_build ${REQUIREMENTS} html
 
 serve: build
 	${VIRTUALENV} $(MAKE) -C site serve
 
-github: build
+publish: .checkpoint/flex_branch
+	${VIRTUALENV} $(MAKE) -C site publish
+
+github: publish
 	${VIRTUALENV} ghp-import -m "Generate Pelican site" -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIR)
 	@git push -fq https://${GH_TOKEN}@github.com/$(TRAVIS_REPO_SLUG).git master > /dev/null
