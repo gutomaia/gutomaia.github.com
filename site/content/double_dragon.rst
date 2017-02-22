@@ -38,7 +38,7 @@ Meanwhile, Final Fight was dominating the arcades in the early nineties and then
 
 Capcom, had the chance to help even things for Nintendo, but missed badly. Although the game was a almost perfect arcade conversion in terms of graphics, the lack of two player took away the replayability that NES's Double Dragon had. The sixteen bit's beat ‘em up title was took from Nintendo by Sega's `Streets of Rage <https://en.wikipedia.org/wiki/Streets_of_Rage>`_ later on. And here we go again, another game with Streets of Fire references. I think I see a pattern.
 
-This year, we have the lauch of `Double Dragon 4`. Ok, before we go on. Let's pretend they never release either `Double Dragon Neon` game or the `Double Dragon` movie. It's perfect stated here Streets of Fire is the official Double Dragon movie and Willem Dafoe the leader of the Black Warriors gang.
+This year, we have the launch of `Double Dragon 4`. Ok, before we go on. Let's pretend they never release either `Double Dragon Neon` game or the `Double Dragon` movie. It's perfect stated here Streets of Fire is the official Double Dragon movie and Willem Dafoe the leader of the Black Warriors gang.
 
 The new adventure of the Lee brother's took place after the events of the DD3 and their sacred as hell stones, which I would never be able to collect. It has all the main features from his predecessors. The 2-player co-op with friend fighting at the end from the first. The remarkable style with the arms over the body from the second. And, finally, the bad-guys-join-the-party-after-you-beat-them feature.
 
