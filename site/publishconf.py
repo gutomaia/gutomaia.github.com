@@ -24,7 +24,7 @@ DELETE_OUTPUT_DIRECTORY = True
 
 GOOGLE_ADSENSE = {
     'ca_id': 'ca-pub-8039666399992046',    # Your AdSense ID
-    'page_level_ads': True,                # Allow Page Level Ads (mobile)
+    'page_level_ads': False,               # Allow Page Level Ads (mobile)
     'ads': {
         'main_menu': '2727902218',         # Banner before main menu (all pages)
         'index_top': '8634835017',         # Banner after main menu (index only)
