@@ -3,7 +3,7 @@ wedNESday #5 - It's alive!
 
 :date: 2017-02-01 23:00
 :modified: 2017-02-04 13:54
-:tags: 6502 nes python raspberrypi
+:tags: 6502, nes, python, raspberrypi
 :Category: nes
 :slug: wednesday_5
 :authors: Guto Maia, Toshimitsu Kamei

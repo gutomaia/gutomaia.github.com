@@ -3,7 +3,7 @@ wedNESday #1
 
 :date: 2017-01-04 23:00
 :modified: 2017-01-07 23:00
-:tags: nes emulator python
+:tags: nes, emulator, python
 :Category: nes
 :slug: wednesday_1
 :authors: Guto Maia
