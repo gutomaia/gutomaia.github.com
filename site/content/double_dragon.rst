@@ -10,6 +10,12 @@ Double Dragon
 :sumary: Double Dragon's good memories
 
 
+.. figure:: {filename}/images/double_dragon.jpg
+    :align: center
+    :alt: Double Dragon
+    :scale: 50%
+
+
 Not in the mood to code today, so let's play a classic: Double Dragon. It's hard to explain nowadays what a phenomenal game it was back then. So before reviewing the NES version, which I'm going to play, let's first talk about the game’s history.
 
 At the end eighties, there was a Double Dragon machine at the center of every arcade. The game was so popular that it opened up the `beat\'em up genre <https://en.wikipedia.org/wiki/Beat_em_up>`_. Soon enough, arcades were filled with beloved beat ‘em up games like Golden Axe and Final Fight; and then eventually CAPCOM would lead the genre to whole other level. But even by then, in the mid-nineties, brothers Billy and Jimmy Lee—the stars of Double Dragon—would never lose their spot.
