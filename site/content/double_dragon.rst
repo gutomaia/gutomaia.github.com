@@ -1,12 +1,12 @@
 Double Dragon
 #############
 
-:date: 2017-02-15 23:00
+:date: 2017-02-22 23:00
 :modified: 2017-02-12 13:54
-:tags: nes, double dragon, wedNESday
+:tags: nes, double dragon, wedNESday, review
 :Category: nes
 :slug: double_dragon
-:authors: Guto Maia
+:authors: Guto Maia, Blake J. Harris
 :sumary: Double Dragon's good memories
 
 
@@ -43,4 +43,10 @@ This year, we have the launch of `Double Dragon 4`. Ok, before we go on. Let's p
 The new adventure of the Lee brother's took place after the events of the DD3 and their sacred as hell stones, which I would never be able to collect. It has all the main features from his predecessors. The 2-player co-op with friend fighting at the end from the first. The remarkable style with the arms over the body from the second. And, finally, the bad-guys-join-the-party-after-you-beat-them feature.
 
 It took decades for a fourth episode, and all the other beat 'em up greaties never took this step (Golden Axe, Streets of Rage and Final Fight each have only 3 games). Why didn't they? My answer would be, the lack of style, good memories and nostalgia. Because ultimately Double Dragon was the game that created and defines the beat 'em up genre, as well as defines the "2 player" game style of the eighties.
+
+
+Ending credits and bonus stage
+==============================
+
+I must share the authoring credits of this post with `Blake J. Harris <http://www.blakejharris.com>`_. He did more than amazing review on the final draft. He reestructed and extracted the whole essence that was there. Blake is the author of the best-selling `Console Wars <https://www.amazon.com.br/Console-Wars-Nintendo-Defined-Generation/dp/0062276700>`_ book and made a interview that digs `Streets of Fire history <http://www.slashfilm.com/streets-of-fire-oral-history/>`_. There wouldn't be a better review for this post. Also, he is working on a new book about virtual reality.
 
