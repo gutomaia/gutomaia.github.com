@@ -145,4 +145,4 @@ Upcomming Improvements
 
 - The reset routine is not consistent. Sometime it jumps to 0xfff[a-e], sometime it doesn't.
 - If you took a closer look on the wiring, you will notice that not all PINs were connected. I know, we are just connecting the address bus. We did not connected the data bus due the lack of available ports. That's why we can only hear from the address bus so far.
-- We need to use some IO expander for sending data to address bus and data bus, that way will be using less ports on the
+- We need to use some IO expander for sending data to address bus and data bus, that way will be using less ports on the Raspberry PI.
