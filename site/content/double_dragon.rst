@@ -54,5 +54,5 @@ It took decades for a fourth episode, and all the other beat 'em up greaties nev
 Ending credits and bonus stage
 ==============================
 
-I must share the authoring credits of this post with `Blake J. Harris <http://www.blakejharris.com>`_. He did more than amazing review on the final draft. He reestructed and extracted the whole essence that was there. Blake is the author of the best-selling `Console Wars <https://www.amazon.com.br/Console-Wars-Nintendo-Defined-Generation/dp/0062276700>`_ book and made a interview that digs `Streets of Fire history <http://www.slashfilm.com/streets-of-fire-oral-history/>`_. There wouldn't be a better review for this post. Also, he is working on a new book about virtual reality.
+I must share the authoring credits of this post with `Blake J. Harris <http://www.blakejharris.com>`_. He did more than amazing review on the final draft. He reestructed and extracted the whole essence that was there. Blake is the author of the best-selling `Console Wars <https://www.amazon.com.br/Console-Wars-Nintendo-Defined-Generation/dp/0062276700>`_ book and made a interview that digs `Streets of Fire history <http://www.slashfilm.com/streets-of-fire-oral-history/>`_. There wouldn't be a better reviewer for this post. Also, he is working on a new book about virtual reality.
 
