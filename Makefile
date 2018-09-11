@@ -14,6 +14,10 @@ CHECK=@if [ $$? -eq 0 ]; then echo "${OK}"; else echo "${FAIL}" ; fi
 
 WGET = wget -q
 
+ifeq "" "$(shell which wget)"
+WGET = curl -O -s
+endif
+
 default: python.mk
 	@$(MAKE) -C . build
 
