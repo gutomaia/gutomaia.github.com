@@ -10,7 +10,7 @@ Double Dragon
 :sumary: Double Dragon's good memories
 
 
-.. figure:: {filename}/images/double_dragon.jpg
+.. figure:: {static}/images/double_dragon.jpg
     :align: center
     :alt: Double Dragon
     :scale: 50%

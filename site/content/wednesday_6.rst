@@ -9,7 +9,7 @@ wedNESday #6 - A bigger blender brain
 :authors: Guto Maia
 :sumary: A bigger blender brain
 
-.. figure:: {filename}/images/blender_bigger_brain.jpg
+.. figure:: {static}/images/blender_bigger_brain.jpg
     :align: center
     :alt: Blender Brain
     :scale: 50%

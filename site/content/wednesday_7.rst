@@ -9,7 +9,7 @@ wedNESday #7 - More than just coding
 :authors: Guto Maia
 :sumary: More than just coding
 
-.. figure:: {filename}/images/more_than_coding.jpg
+.. figure:: {static}/images/more_than_coding.jpg
     :align: center
     :alt: more than coding
     :scale: 50%

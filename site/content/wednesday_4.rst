@@ -9,7 +9,7 @@ wedNESday #4
 :authors: Guto Maia
 :sumary: write a NES emulator
 
-.. figure:: {filename}/images/blender_brain.jpg
+.. figure:: {static}/images/blender_brain.jpg
     :align: center
     :alt: Blender Brain
     :scale: 50%
@@ -31,7 +31,7 @@ Trivia fact
 -----------
 - Matt Groening's Futurama showed that Blender uses a 6502 CPU.
 
-.. figure:: {filename}/images/futurama.jpg
+.. figure:: {static}/images/futurama.jpg
     :align: center
     :alt: Futurama
 

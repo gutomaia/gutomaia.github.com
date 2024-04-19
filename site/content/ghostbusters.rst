@@ -9,7 +9,7 @@ Ghostbusters
 :authors: Guto Maia
 :sumary: python smartthings your CI
 
-.. figure:: {filename}/images/stranger_things_ghostbusters.jpg
+.. figure:: {static}/images/stranger_things_ghostbusters.jpg
     :align: center
     :alt: stranger things ghostbusters
     :scale: 50%
@@ -29,7 +29,7 @@ And finally, add the SMARTTHINGS_URL and SMARTTHINGS_ACCESS_TOKEN vars to your t
       curl -X PUT -H "Authorization: Bearer ${SMARTTHINGS_ACCESS_TOKEN}" -H "Content-Type: application/json" -d '{"switch": 1}' ${SMARTTHINGS_URL}
 
 
-.. figure:: {filename}/images/ghostbusters_lamp.jpg
+.. figure:: {static}/images/ghostbusters_lamp.jpg
     :align: center
     :alt: Who are you gonna call?
     :scale: 50%

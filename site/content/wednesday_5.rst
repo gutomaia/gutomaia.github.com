@@ -9,7 +9,7 @@ wedNESday #5 - It's alive!
 :authors: Guto Maia, Toshimitsu Kamei
 :sumary: Connect RaspberryPI's GPIO with a 6502 (W65C02S)
 
-.. figure:: {filename}/images/blender_terminal.jpg
+.. figure:: {static}/images/blender_terminal.jpg
     :align: center
     :alt: it's alive
     :scale: 50%
@@ -33,7 +33,7 @@ Wiring Up
 
 Not really a big deal, however, you need to be carefull and patient. Raspberry PI's GPIO is not so fault tolerant as the Arduino is, any wrong connection on the ground or VCC and you might kill it. About the W65C02S, I'm not so sure, didn't burn any so far.
 
-.. figure:: {filename}/images/blender_breadboard.jpg
+.. figure:: {static}/images/blender_breadboard.jpg
     :align: center
     :alt: breadboard.jpg
 
