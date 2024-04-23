@@ -40,6 +40,7 @@ MENUITEMS = [
 
 STATIC_PATHS = [
     'images',
+    'css',
     join('extra', 'CNAME'),
     join('extra', 'favicon.ico'),
     join('extra', 'robots.txt'),
@@ -56,6 +57,8 @@ EXTRA_PATH_METADATA = {
 THEME = "../Flex"
 
 FAVICON = '/favicon.ico'
+
+CUSTOM_CSS = ['/css/hacks.css']
 
 #Flex Theme Specific
 SITETITLE = 'gutomaia'
