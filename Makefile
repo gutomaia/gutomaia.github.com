@@ -43,10 +43,13 @@ Flex/templates/index.html:
 .checkpoint/flex_branch: Flex/templates/index.html
 	cd Flex && git checkout v2.1.0 && touch ../$@
 
+site/content/extra/favicon.ico: input/profile.png ${REQUIREMENTS}
+	${VIRTUALENV} python image.py  -o $@ -t favicon input/profile.png
+
 html: .checkpoint/flex_branch
 	${VIRTUALENV} $(MAKE) -C site html
 
-build: python_build ${REQUIREMENTS} html
+build: python_build ${REQUIREMENTS} site/content/extra/favicon.ico html
 
 serve: build
 	${VIRTUALENV} $(MAKE) -C site serve
