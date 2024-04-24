@@ -9,6 +9,13 @@ wedNESday #8 - A long delay
 :authors: Guto Maia
 :sumary: More than just coding
 
+.. figure:: {static}/images/a_long_time_ago.webp
+    :align: center
+    :alt: more than coding
+    :scale: 50%
+
+
+
 A Long Time Ago
 ===============
 
