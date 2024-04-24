@@ -58,5 +58,5 @@ publish: .checkpoint/flex_branch
 	${VIRTUALENV} $(MAKE) -C site publish
 
 github: publish
-	${VIRTUALENV} ghp-import -m "Generate Pelican site" -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIR)
-	@git push -fq https://${GH_TOKEN}@github.com/$(TRAVIS_REPO_SLUG).git master > /dev/null
+	${VIRTUALENV} ghp-import -n -o -f -p -m "Generate Pelican site" -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIR)
+	@echo git push -fq https://${GH_TOKEN}@github.com/$(TRAVIS_REPO_SLUG).git master > /dev/null
