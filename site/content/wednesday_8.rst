@@ -78,7 +78,7 @@ However, giving the Nintengo example, it's worth noting that although fetching t
 Testing Specification
 ---------------------
 
-I often emphasize that a good test is built upon a solid specification. Following the principles of Model Driven Architecture (MDA), I consider a specification to be effective when it exhibits the following characteristics:
+I often emphasize that a good test is built upon a solid specification. Following the principles of Lean Architecture and Model Driven Architecture (MDA), I consider a specification to be effective when it exhibits the following characteristics:
 
 - **Self-contained:** A good specification should be self-contained, meaning it doesn't rely on any external references. It defines the scope of the problem within itself, providing clear boundaries for testing.
 
