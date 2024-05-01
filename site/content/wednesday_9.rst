@@ -133,9 +133,9 @@ We will found glitchs regarding
 Despite encountering several issues, the tool boasts an accuracy rate of over 90%. To be more precise, let's take a closer look:
 
 .. csv-table::
-    :header: "Hits", "Misses", "Accuracy"
+    :header: "Title Screens", "Hits", "Misses", "Accuracy"
 
-     134761, 13559, 90.85827939590075 %
+     618, 134761, 13559, 90.85827939590075 %
 
 
 Testing the tool agains a random sample of NES title screens.
