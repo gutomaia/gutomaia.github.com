@@ -22,7 +22,8 @@ AUTHOR_FEED_RSS = None
 LINKS = (
     ('pyNES', '/pyNES'),
     ('nodeNES', '/nodeNES'),
-    ('wedNESday', '/wedNESday/0.0.x')
+    ('TylerD', '/TylerD'),
+    ('wedNESday', '/wedNESday/0.0.x'),
 )
 
 # Social widget

@@ -1,8 +1,8 @@
 wedNESday #9 - Exploring NES Graphics
 #####################################
 
-:date: 2024-05-01 16:20
-:modified: 2024-05-01 16:20
+:date: 2024-05-01 20:00
+:modified: 2024-05-01 20:00
 :tags: 6502, nes, python, wedNESday
 :Category: nes
 :slug: wednesday_9
@@ -16,7 +16,9 @@ wedNESday #9 - Exploring NES Graphics
 
 Playing around with NES graphics can be an incredibly fun and rewarding experience. Transitioning from that blank screen to one filled with tiles in a nametable highlights the capabilities and limitations of the platform. It's like a window ready to explode.
 
-Through this post, we might use some terms and conventions on the NES.
+Through this post, we might use some terms and conventions on the NES. There is NES 101 at the end of the post if you may need.
+
+In this post, you may stomp in some terms and conventions used in NES game development. For those unfamiliar with NES graphs, we've included a handy NES 101 section at the end of the post for reference.
 
 The goal
 ========
@@ -29,8 +31,9 @@ The solution is simple: import screens that the NES was capable of rendering. By
 Tyler D
 =======
 
-I've created a command to import images to a NES screen. Does it works? I could safaly estimate that it's XX % accurate. But how's that? How can I avail
+I've developed a command to import images onto a NES screen. Does it work effectively? How accurate it is? But how can I verify this? How can I ensure its reliability?
 
+Let's review some of the know glitchs.
 
 The Inner War
 -------------
@@ -127,7 +130,7 @@ We will found glitchs regarding
  - Render part of the screen in sprites;
  - Attribute table not being fully defined.
 
-But the requestion still arises, how accurate is the tool?
+Despite encountering several issues, the tool boasts an accuracy rate of over 90%. To be more precise, let's take a closer look:
 
 .. csv-table::
     :header: "Hits", "Misses", "Accuracy"
