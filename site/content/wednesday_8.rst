@@ -1,8 +1,8 @@
 wedNESday #8 - A long delay
 ###########################
 
-:date: 2024-04-19 23:00
-:modified: 2024-04-19 23:00
+:date: 2024-04-24 16:20
+:modified: 2024-04-24 16:20
 :tags: 6502, nes, python, wedNESday
 :Category: nes
 :slug: wednesday_8
@@ -11,7 +11,7 @@ wedNESday #8 - A long delay
 
 .. figure:: {static}/images/a_long_time_ago.webp
     :align: center
-    :alt: more than coding
+    :alt: a long time ago
     :scale: 50%
 
 
