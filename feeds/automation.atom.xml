@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>gutomaia - automation</title><link href="https://gutomaia.net/" rel="alternate"></link><link href="https://gutomaia.net/feeds/automation.atom.xml" rel="self"></link><id>https://gutomaia.net/</id><updated>2017-02-16T22:15:00-02:00</updated><subtitle>Pythonist with a NES and an ☂</subtitle><entry><title>Ghostbusters</title><link href="https://gutomaia.net/ghostbusters.html" rel="alternate"></link><published>2017-02-16T22:15:00-02:00</published><updated>2017-02-16T22:15:00-02:00</updated><author><name>Guto Maia</name></author><id>tag:gutomaia.net,2017-02-16:/ghostbusters.html</id><summary type="html">&lt;div class="figure align-center"&gt;
+&lt;img alt="stranger things ghostbusters" src="https://gutomaia.net/images/stranger_things_ghostbusters.jpg" /&gt;
+&lt;/div&gt;
+&lt;p&gt;I had my childhood in the eighties, and 'course, I used to wake up on staturday morning to watch ghostbusters. Then, when I though for a continuos integration lamp, I know it should have the &amp;quot;prohibed ghost sign&amp;quot;! In this post, I'm gonna show you, how to use your smartthings …&lt;/p&gt;</summary><content type="html">&lt;div class="figure align-center"&gt;
+&lt;img alt="stranger things ghostbusters" src="https://gutomaia.net/images/stranger_things_ghostbusters.jpg" /&gt;
+&lt;/div&gt;
+&lt;p&gt;I had my childhood in the eighties, and 'course, I used to wake up on staturday morning to watch ghostbusters. Then, when I though for a continuos integration lamp, I know it should have the &amp;quot;prohibed ghost sign&amp;quot;! In this post, I'm gonna show you, how to use your smartthings hub to notify you when your travis deploy is broken.&lt;/p&gt;
+&lt;p&gt;Well, it's not hard, in fact, you might get yours working in a couple of minutes. As said, I will need a Smarthing Hub and a Switch. Then you need to follow the steps on &lt;a class="reference external" href="https://github.com/dpjanes/iotdb-smartthings"&gt;Iotdb Smartthings&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;With that setup, your smarthing thing had a JSON api that you can call on the cloud. All you need is the URL for the device and the access token. (I will post a simple code later)&lt;/p&gt;
+&lt;p&gt;And finally, add the SMARTTHINGS_URL and SMARTTHINGS_ACCESS_TOKEN vars to your travis settings and the following code .travis file.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;after_failure: &amp;gt;-
+  curl -X PUT -H &amp;quot;Authorization: Bearer ${SMARTTHINGS_ACCESS_TOKEN}&amp;quot; -H &amp;quot;Content-Type: application/json&amp;quot; -d &amp;#39;{&amp;quot;switch&amp;quot;: 1}&amp;#39; ${SMARTTHINGS_URL}
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="figure align-center"&gt;
+&lt;img alt="Who are you gonna call?" src="https://gutomaia.net/images/ghostbusters_lamp.jpg" /&gt;
+&lt;/div&gt;
+&lt;p&gt;Then, when a build got rogue on wedNESday, I got it! I ain't gotta a build falling. Not on my watch!&lt;/p&gt;
+</content><category term="automation"></category><category term="ghostbusters"></category><category term="travis"></category><category term="ci"></category><category term="automation"></category><category term="smartthings"></category></entry></feed>
