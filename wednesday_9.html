@@ -1,0 +1,407 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="https://gutomaia.net/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://gutomaia.net/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://gutomaia.net/theme/font-awesome/css/font-awesome.min.css">
+
+    <link href="https://gutomaia.net/['/css/hacks.css']" rel="stylesheet">
+
+    <link href="https://gutomaia.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="gutomaia Atom">
+
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+
+<meta name="author" content="Guto Maia" />
+<meta name="description" content="Playing around with NES graphics can be an incredibly fun and rewarding experience. Transitioning from that blank screen to one filled with tiles in a nametable highlights the capabilities and limitations of the platform. It's like a window ready to explode. Through this post, we might use some terms and …" />
+<meta name="keywords" content="6502, nes, python, wedNESday">
+<meta property="og:site_name" content="gutomaia"/>
+<meta property="og:title" content="wedNESday #9 - Exploring NES Graphics"/>
+<meta property="og:description" content="Playing around with NES graphics can be an incredibly fun and rewarding experience. Transitioning from that blank screen to one filled with tiles in a nametable highlights the capabilities and limitations of the platform. It's like a window ready to explode. Through this post, we might use some terms and …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://gutomaia.net/wednesday_9.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2024-05-01 20:00:00-03:00"/>
+<meta property="article:modified_time" content="2024-05-01 20:00:00-03:00"/>
+<meta property="article:author" content="https://gutomaia.net/author/guto-maia.html">
+<meta property="article:section" content="nes"/>
+<meta property="article:tag" content="6502"/>
+<meta property="article:tag" content="nes"/>
+<meta property="article:tag" content="python"/>
+<meta property="article:tag" content="wedNESday"/>
+<meta property="og:image" content="https://s.gravatar.com/avatar/760d34405db2c028a3fb099a4510d870?s=100">
+
+  <title>gutomaia &ndash; wedNESday #9 - Exploring NES Graphics</title>
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-8039666399992046",
+      enable_page_level_ads: true
+    });
+  </script>
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://gutomaia.net">
+        <img src="https://s.gravatar.com/avatar/760d34405db2c028a3fb099a4510d870?s=100" alt="gutomaia" title="gutomaia">
+      </a>
+      <h1><a href="https://gutomaia.net">gutomaia</a></h1>
+
+<p>Pythonist with a NES and an ☂</p>
+      <nav>
+        <ul class="list">
+
+          <li><a href="/pyNES" target="_blank">pyNES</a></li>
+          <li><a href="/nodeNES" target="_blank">nodeNES</a></li>
+          <li><a href="/TylerD" target="_blank">TylerD</a></li>
+          <li><a href="/wedNESday/0.0.x" target="_blank">wedNESday</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-twitter" href="http://twitter.com/gutomaia" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-github" href="http://github.com/gutomaia" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-linkedin" href="http://linkedin.com/in/gutomaia" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <ins class="adsbygoogle ads-responsive"
+           data-ad-client="ca-pub-8039666399992046"
+           data-ad-slot="2727902218"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+
+<article class="single">
+  <header>
+    <h1 id="wednesday_9">wedNESday #9 - Exploring NES Graphics</h1>
+    <p>
+          Posted on Wed 01 May 2024 in <a href="https://gutomaia.net/category/nes.html">nes</a>
+
+
+    </p>
+  </header>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle ads-responsive"
+         data-ad-client="ca-pub-8039666399992046"
+         data-ad-slot="2588301415"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+  <div>
+    <div class="figure align-center">
+<img alt="a long time ago" src="https://gutomaia.net/images/fightclub.jpg" />
+</div>
+<p>Playing around with NES graphics can be an incredibly fun and rewarding experience. Transitioning from that blank screen to one filled with tiles in a nametable highlights the capabilities and limitations of the platform. It's like a window ready to explode.</p>
+<p>Through this post, we might use some terms and conventions on the NES. There is NES 101 at the end of the post if you may need.</p>
+<p>In this post, you may stomp in some terms and conventions used in NES game development. For those unfamiliar with NES graphs, we've included a handy NES 101 section at the end of the post for reference.</p>
+<div class="section" id="the-goal">
+<h2>The goal</h2>
+<p>The objective is to import any image onto a NES screen. However, when importing a regular image, we may encounter loss in colors and resolution. How can we assess the accuracy of the program?</p>
+<p>The solution is simple: import screens that the NES was capable of rendering. By comparing the imported images with the original NES screens, we can gauge the program's accuracy.</p>
+</div>
+<div class="section" id="tyler-d">
+<h2>Tyler D</h2>
+<p>I've developed a command to import images onto a NES screen. Does it work effectively? How accurate it is? But how can I verify this? How can I ensure its reliability?</p>
+<p>Let's review some of the know glitchs.</p>
+<div class="section" id="the-inner-war">
+<h3>The Inner War</h3>
+<p>In &quot;Abadox: The Deadly Inner War&quot; is a horizontally scrolling shoot 'em up video game developed by Natsume and published by Milton Bradley Company released in North America in 1990 and in Europe in 1991.</p>
+<p>In &quot;Abadox,&quot; players control a small spaceship tasked with navigating through the insides of a giant alien organism known as &quot;Abadox&quot; to rescue the princess Maria. The game's story is set in the year 5012, where the planet Abadox has been invaded and consumed by a giant alien organism. The princess Maria has been swallowed by the creature, and the player must pilot their ship through various levels of the organism's interior to rescue her and ultimately destroy the creature.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Orignal</th>
+<th class="head">Emulated</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><img alt="" class="first last" src="https://gutomaia.net/images/abadox_the_deadly_inner_war.png" />
+</td>
+<td><img alt="" class="first last" src="https://gutomaia.net/images/abadox_the_deadly_inner_war_emulated.png" />
+</td>
+</tr>
+</tbody>
+</table>
+<p>Above, we have the original title screen image side by side with the emulated one generated by the tool. At first glance, it looks quite amazing. Look again, the eyes can be deceiving.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Diff</th>
+<th class="head">FCEUX Screenshot</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><img alt="" class="first last" src="https://gutomaia.net/images/abadox_the_deadly_inner_war_diff.png" />
+</td>
+<td><img alt="" class="first last" src="https://gutomaia.net/images/abadox_the_deadly_inner_war_screenshot.png" />
+</td>
+</tr>
+</tbody>
+</table>
+<p>Now, with more detail, we can observe on the left the disparities between the Original and the Emulated images. In orange, we can see the differences in Metatiles, while in yellow, the discrepancies in tiles are highlighted, and in red, the pixel differences stand out. These discrepancies may have occurred because the original image might have utilized sprites to enhance certain colors. I will demonstrate this in the next example. However, what truly stands out here is the color disparity between the Emulated and the FCEUX Screenshot. This discrepancy arises from my improper utilization of the actual FCEUX palette table. This marks our first glitch.</p>
+</div>
+<div class="section" id="i-m-batman-without-sprite-overlay">
+<h3>I'm Batman, without sprite overlay</h3>
+<p>&quot;Batman: The Video Game&quot; is a side-scrolling action-platformer developed and published by Sunsoft. Released in 1989, it's based on the 1989 film &quot;Batman&quot; directed by Tim Burton.</p>
+<p>In the game, players control Batman as he fights through Gotham City to stop the villainous Joker and save the city. The gameplay consists of traversing side-scrolling levels, battling enemies, and ultimately confronting bosses at the end of each stage. Batman's primary weapon is his Batarang, but he can also perform melee attacks and use other gadgets such as a grappling hook to navigate levels.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Orignal</th>
+<th class="head">Emulated</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><img alt="" class="first last" src="https://gutomaia.net/images/batman.png" />
+</td>
+<td><img alt="" class="first last" src="https://gutomaia.net/images/batman_emulated.png" />
+</td>
+</tr>
+</tbody>
+</table>
+<p>The title screen is astonishing. For its time, it exudes a photorealistic feeling. However, in emulation, looks a more noir aesthetic.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Diff</th>
+<th class="head">FCEUX Screenshot</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><img alt="" class="first last" src="https://gutomaia.net/images/batman_diff.png" />
+</td>
+<td><img alt="" class="first last" src="https://gutomaia.net/images/batman_screenshot.png" />
+</td>
+</tr>
+</tbody>
+</table>
+<p>I see, some yellow tones were omitted from the result. Each 16x16 metatile block has a 4-color limit. To compensate for this, the game utilizes sprites in certain areas of the face and symbol to incorporate subtle touches. This time, we don't need the difference image to notice, although you can also check it out.</p>
+</div>
+<div class="section" id="double-dragon-s-dungeons">
+<h3>Double Dragon's Dungeons</h3>
+<p>&quot;Advanced Dungeons &amp; Dragons: DragonStrike&quot; is a fantasy-themed video game released in 1992. Developed by Westwood Associates and published by FCI, the game is based on the &quot;DragonStrike&quot; tabletop role-playing game (RPG) from the Dungeons &amp; Dragons franchise.</p>
+<p>In &quot;DragonStrike,&quot; players assume the role of a dragon rider tasked with defeating evil forces threatening the land of Krynn. The game combines elements of action and flight simulation with RPG mechanics, offering a unique gaming experience within the Dungeons &amp; Dragons universe.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Orignal</th>
+<th class="head">Emulated</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><img alt="" class="first last" src="https://gutomaia.net/images/advanced_dungeons_dragons_dragon_strike.png" />
+</td>
+<td><img alt="" class="first last" src="https://gutomaia.net/images/advanced_dungeons_dragons_dragon_strike_emulated.png" />
+</td>
+</tr>
+</tbody>
+</table>
+<p>A superb &quot;Double Dragon&quot; title screen that doesn't depict the typical theme of brothers fighting for a girl. However, it couldn't fit into the regular pattern table.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Diff</th>
+<th class="head">FCEUX Screenshot</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><img alt="" class="first last" src="https://gutomaia.net/images/advanced_dungeons_dragons_dragon_strike_diff.png" />
+</td>
+<td><img alt="" class="first last" src="https://gutomaia.net/images/advanced_dungeons_dragons_dragon_strike_screenshot.png" />
+</td>
+</tr>
+</tbody>
+</table>
+<p>That image utilizes sprites to render an entire area. With only the NES's background tiles, we can display at most 256 unique tiles on the screen. However, the screen is composed of 960 tiles. This inevitably leads to border issues, as tile repetition becomes necessary. To address this limitation, the game renders part of the screen using sprites. However, there's a catch: we can display at most 64 sprites on the screen, with no more than 8 in the same line. This allows for a maximum of 320 unique tiles on the screen. Therefore, despite this workaround, there is still some repetition present in the rendering.</p>
+</div>
+<div class="section" id="still-there">
+<h3>Still there?</h3>
+<p>I doubt, that you are still reading this or that you did care about the resume of the previous game, if it was released in 1990 or not.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Orignal</th>
+<th class="head">Emulated</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><img alt="" class="first last" src="https://gutomaia.net/images/addams_family_the_pugsley_s_scavenger_hunt.png" />
+</td>
+<td><img alt="" class="first last" src="https://gutomaia.net/images/addams_family_the_pugsley_s_scavenger_hunt_emulated.png" />
+</td>
+</tr>
+</tbody>
+</table>
+<p>Even what would be the simplyst screen shot, some minor glitchs would arrise.
+See the botton part of the image?</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Diff</th>
+<th class="head">FCEUX Screenshot</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><img alt="" class="first last" src="https://gutomaia.net/images/addams_family_the_pugsley_s_scavenger_hunt_diff.png" />
+</td>
+<td><img alt="" class="first last" src="https://gutomaia.net/images/addams_family_the_pugsley_s_scavenger_hunt_screenshot.png" />
+</td>
+</tr>
+</tbody>
+</table>
+<p>Problem here is dua to some attribute table missing. There must be some attribute table missing data on the final rom.</p>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion</h2>
+<p>We will found glitchs regarding</p>
+<blockquote>
+<ul class="simple">
+<li>Differs in the used palette and emulator palette;</li>
+<li>Use of sprite overlay to increse color's in area;</li>
+<li>Render part of the screen in sprites;</li>
+<li>Attribute table not being fully defined.</li>
+</ul>
+</blockquote>
+<p>Despite encountering several issues, the tool boasts an accuracy rate of over 90%. To be more precise, let's take a closer look:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Title Screens</th>
+<th class="head">Hits</th>
+<th class="head">Misses</th>
+<th class="head">Accuracy</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>618</td>
+<td>134761</td>
+<td>13559</td>
+<td>90.85827939590075 %</td>
+</tr>
+</tbody>
+</table>
+<p>Testing the tool agains a random sample of NES title screens.
+I our case is using 618 different images. You can check the more detail
+result at <a class="reference external" href="https://gutomaia.net/TylerD/gamelist.html">TylerD's game title screen list</a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p><strong>NES Graphs 101</strong></p>
+<p><strong>Tiles</strong></p>
+<p>Tiles are the building blocks of NES graphics. Each tile is an 8x8 pixel square. They are made of two bitplane, allowing at most 4 colors per tile. A tile can be represented in the screen in two forms, in the background as a Background Tile or in the foreground as a Sprite.</p>
+<p><strong>Pattern Tables</strong></p>
+<p>Pattern tables store the graphical data for each tile used in the game. There are two pattern tables in the NES, each containing 256 tiles. These pattern tables are where developers define the visual appearance of sprites and backgrounds in their games. Usually, games uses one pattern table for the background tiles and the other for the sprites.</p>
+<p><strong>Name Tables</strong></p>
+<p>Name tables are an essential part of the NES's graphics system. In simple terms, a name table is a 32x30 grid of 8x8 tiles that represent what Usually
+represents the background of the game.</p>
+<p>player sees on the screen during gameplay. However, the NES only has enough memory to store two name tables at once, each representing one screen of gameplay. These name tables are often referred to as nametable 0 and nametable 1.</p>
+<p><strong>How It Works</strong></p>
+<p class="last">The NES's graphics hardware fetches data from the name tables and pattern tables to generate the visuals seen on the screen. When the console is powered on or reset, the CPU initializes the name tables with the necessary graphical data. During gameplay, the CPU updates the name tables as needed to reflect changes in the game world.</p>
+</div>
+</div>
+
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://gutomaia.net/tag/6502.html">6502</a>
+      <a href="https://gutomaia.net/tag/nes.html">nes</a>
+      <a href="https://gutomaia.net/tag/python.html">python</a>
+      <a href="https://gutomaia.net/tag/wednesday.html">wedNESday</a>
+    </p>
+  </div>
+
+
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle ads-responsive"
+         data-ad-client="ca-pub-8039666399992046"
+         data-ad-slot="4065034611"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+</article>
+
+    <footer>
+<p>&copy; Guto Maia 2024</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-32666248-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " gutomaia ",
+  "url" : "https://gutomaia.net",
+  "image": "https://s.gravatar.com/avatar/760d34405db2c028a3fb099a4510d870?s=100",
+  "description": ""
+}
+</script>
+</body>
+</html>

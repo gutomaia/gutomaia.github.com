@@ -1,0 +1,286 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="https://gutomaia.net/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://gutomaia.net/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://gutomaia.net/theme/font-awesome/css/font-awesome.min.css">
+
+    <link href="https://gutomaia.net/['/css/hacks.css']" rel="stylesheet">
+
+    <link href="https://gutomaia.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="gutomaia Atom">
+
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+
+<meta name="author" content="Guto Maia" />
+<meta name="description" content="First of all, I must thanks Toshimitsu Kamei, without him this post wouln't be possible. Some time ago, he helped me up connecting the RasberryPI's GPIO along with W65C02S. It was fun, although I was kind of clumsy in this meantime, and them now I have to reattach everything. So …" />
+<meta name="keywords" content="6502, nes, python, raspberrypi">
+<meta property="og:site_name" content="gutomaia"/>
+<meta property="og:title" content="wedNESday #5 - It's alive!"/>
+<meta property="og:description" content="First of all, I must thanks Toshimitsu Kamei, without him this post wouln't be possible. Some time ago, he helped me up connecting the RasberryPI's GPIO along with W65C02S. It was fun, although I was kind of clumsy in this meantime, and them now I have to reattach everything. So …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://gutomaia.net/wednesday_5.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2017-02-01 23:00:00-02:00"/>
+<meta property="article:modified_time" content="2017-02-04 13:54:00-02:00"/>
+<meta property="article:author" content="https://gutomaia.net/author/guto-maia.html">
+<meta property="article:section" content="nes"/>
+<meta property="article:tag" content="6502"/>
+<meta property="article:tag" content="nes"/>
+<meta property="article:tag" content="python"/>
+<meta property="article:tag" content="raspberrypi"/>
+<meta property="og:image" content="https://s.gravatar.com/avatar/760d34405db2c028a3fb099a4510d870?s=100">
+
+  <title>gutomaia &ndash; wedNESday #5 - It's alive!</title>
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-8039666399992046",
+      enable_page_level_ads: true
+    });
+  </script>
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://gutomaia.net">
+        <img src="https://s.gravatar.com/avatar/760d34405db2c028a3fb099a4510d870?s=100" alt="gutomaia" title="gutomaia">
+      </a>
+      <h1><a href="https://gutomaia.net">gutomaia</a></h1>
+
+<p>Pythonist with a NES and an ☂</p>
+      <nav>
+        <ul class="list">
+
+          <li><a href="/pyNES" target="_blank">pyNES</a></li>
+          <li><a href="/nodeNES" target="_blank">nodeNES</a></li>
+          <li><a href="/TylerD" target="_blank">TylerD</a></li>
+          <li><a href="/wedNESday/0.0.x" target="_blank">wedNESday</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-twitter" href="http://twitter.com/gutomaia" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-github" href="http://github.com/gutomaia" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-linkedin" href="http://linkedin.com/in/gutomaia" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <ins class="adsbygoogle ads-responsive"
+           data-ad-client="ca-pub-8039666399992046"
+           data-ad-slot="2727902218"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+
+<article class="single">
+  <header>
+    <h1 id="wednesday_5">wedNESday #5 - It's alive!</h1>
+    <p>
+          Posted on Wed 01 February 2017 in <a href="https://gutomaia.net/category/nes.html">nes</a>
+
+
+    </p>
+  </header>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle ads-responsive"
+         data-ad-client="ca-pub-8039666399992046"
+         data-ad-slot="2588301415"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+  <div>
+    <div class="figure align-center">
+<img alt="it's alive" src="https://gutomaia.net/images/blender_terminal.jpg" />
+</div>
+<p>First of all, I must thanks <a class="reference external" href="https://twitter.com/salexkidd">Toshimitsu Kamei</a>, without him this post wouln't be possible. Some time ago, he helped me up connecting the RasberryPI's GPIO along with <a class="reference external" href="http://datasheets.chipdb.org/Western%20Design/W65C02S.pdf">W65C02S</a>. It was fun, although I was kind of clumsy in this meantime, and them now I have to reattach everything. So, let's do it.</p>
+<div class="section" id="the-ingredients">
+<h2>The Ingredients</h2>
+<ul class="simple">
+<li><a class="reference external" href="https://www.amazon.com/gp/product/B01CD5VC92/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=B01CD5VC92&amp;linkCode=as2&amp;tag=gutomaia-20&amp;linkId=e9dd7c39ce1445557706ad75cbf52728">Raspberry PI's 2 or 3</a></li>
+<li>Breadboard</li>
+<li>W65C02S</li>
+<li><a class="reference external" href="https://www.amazon.com/Honbay-120pcs-Multicolored-Female-Breadboard/dp/B017NEGTXC">Wires</a></li>
+<li><a class="reference external" href="https://www.amazon.com/gp/product/B01CNKXM54/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=B01CNKXM54&amp;linkCode=as2&amp;tag=gutomaia-20&amp;linkId=92cbec6f2c6b0cc63afeaef93116a30b">GPIO Expansion Board</a></li>
+</ul>
+<p>You must use a Raspberry PI's 2 or above, due to the number of available GPIO ports. Using the GPIO Expansion Board is optional but highly recommended. The types of wiring that you might use depends if you be using or not the GPIO Expansion Board.</p>
+</div>
+<div class="section" id="wiring-up">
+<h2>Wiring Up</h2>
+<p>Not really a big deal, however, you need to be carefull and patient. Raspberry PI's GPIO is not so fault tolerant as the Arduino is, any wrong connection on the ground or VCC and you might kill it. About the W65C02S, I'm not so sure, didn't burn any so far.</p>
+<div class="figure align-center">
+<img alt="breadboard.jpg" src="https://gutomaia.net/images/blender_breadboard.jpg" />
+<p class="caption">GPIO's connections</p>
+</div>
+</div>
+<div class="section" id="hello-world">
+<h2>Hello World</h2>
+<p>Now that we got all connected, let's say hello. The following &quot;Hello World&quot; will read the address bus after the reset. When started, 6502 must read content from address 0xfffa, although, anything from 0xfffa to 0xfffe would be nice.</p>
+<div class="highlight"><pre><span></span>GPIO.setmode(GPIO.BCM)
+
+
+ADDRESS_PINS = [
+    4, 17, 27, 22, 10, 9, 11, 5, 6, 13, 19, 26, 21, 20, 16, 12
+]
+
+RESET_PIN = 8
+CLOCK_PIN = 7
+
+
+def terminate(signum, frame):
+    GPIO.cleanup()
+    sys.exit(0)
+
+def setup():
+    # Address pins
+    for pin in ADDRESS_PINS:
+        GPIO.setup(pin, GPIO.IN, pull_up_down = GPIO.PUD_DOWN)
+
+    # Reset pin
+    GPIO.setup(RESET_PIN, GPIO.OUT)
+
+    # Clock PIN (PHI2)
+    GPIO.setup(CLOCK_PIN, GPIO.OUT)
+
+    # SIGINT
+    signal.signal(signal.SIGINT, terminate)
+
+
+def reset():
+    GPIO.output(RESET_PIN, GPIO.HIGH)
+    time.sleep(0.1)
+    GPIO.output(RESET_PIN, GPIO.LOW)
+    time.sleep(0.1)
+    GPIO.output(RESET_PIN, GPIO.HIGH)
+    print(&quot;reset complete&quot;)
+
+def send_clock():
+    time.sleep(0.1)
+    GPIO.output(CLOCK_PIN, GPIO.LOW)
+    time.sleep(0.1)
+    GPIO.output(CLOCK_PIN, GPIO.HIGH)
+
+def read_address():
+    pin_state = &quot;&quot;
+    for pin in reversed(ADDRESS_PINS):
+        pin_state += str(GPIO.input(pin))
+
+    hex_address = hex(int(pin_state, 2))
+    return pin_state, hex_address
+
+def read_address2():
+    pins = [int(GPIO.input(pin) for pin in ADDRESS_PINS)]
+
+    state = sum([int(cc) * (2 ** i) for i, cc in enumerate(reversed(pins))])
+    return state, hex(state)
+
+def main_loop():
+    while True:
+        address = read_address()
+
+        input = None
+        input = raw_input(&#39;(&quot;reset&quot;, (n)ext, &quot;(r)ead&quot;  [{}]&gt; &#39;.format(address))
+
+        if input == &quot;reset&quot;:
+            reset()
+        elif input == &quot;r&quot;:
+            print(&quot;READ!: [{}]&quot;.format(read_address()))
+
+        else:
+            print(&quot;READ!: [{}]&quot;.format(read_address()))
+            send_clock()
+
+
+if __name__ == &quot;__main__&quot;:
+    setup()
+    reset()
+    try:
+        main_loop()
+    except:
+        terminate()
+</pre></div>
+<p>Not much to watch right now. You only be able to reset and check that it is reading the expected address. So far, we just acomplished a overside blinking led demo.</p>
+</div>
+<div class="section" id="upcomming-improvements">
+<h2>Upcomming Improvements</h2>
+<ul class="simple">
+<li>The reset routine is not consistent. Sometime it jumps to 0xfff[a-e], sometime it doesn't.</li>
+<li>If you took a closer look on the wiring, you will notice that not all PINs were connected. I know, we are just connecting the address bus. We did not connected the data bus due the lack of available ports. That's why we can only hear from the address bus so far.</li>
+<li>We need to use some IO expander for sending data to address bus and data bus, that way will be using less ports on the Raspberry PI.</li>
+</ul>
+</div>
+
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://gutomaia.net/tag/6502.html">6502</a>
+      <a href="https://gutomaia.net/tag/nes.html">nes</a>
+      <a href="https://gutomaia.net/tag/python.html">python</a>
+      <a href="https://gutomaia.net/tag/raspberrypi.html">raspberrypi</a>
+    </p>
+  </div>
+
+
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle ads-responsive"
+         data-ad-client="ca-pub-8039666399992046"
+         data-ad-slot="4065034611"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+</article>
+
+    <footer>
+<p>&copy; Guto Maia 2024</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-32666248-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " gutomaia ",
+  "url" : "https://gutomaia.net",
+  "image": "https://s.gravatar.com/avatar/760d34405db2c028a3fb099a4510d870?s=100",
+  "description": ""
+}
+</script>
+</body>
+</html>

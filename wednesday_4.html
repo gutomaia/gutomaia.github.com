@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="https://gutomaia.net/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://gutomaia.net/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://gutomaia.net/theme/font-awesome/css/font-awesome.min.css">
+
+    <link href="https://gutomaia.net/['/css/hacks.css']" rel="stylesheet">
+
+    <link href="https://gutomaia.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="gutomaia Atom">
+
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+
+<meta name="author" content="Guto Maia" />
+<meta name="description" content="Blender Brain* Split and Share I'm splitting the project wedNESday into a guide project. Unfortunelly, it does not have a catch name yet. The goal of this sidekick project is to serve as a lighthouse for thouse who attempt to create an emulator. It's filled with abstract test case scenarios …" />
+<meta name="keywords" content="nes, emulator, python">
+<meta property="og:site_name" content="gutomaia"/>
+<meta property="og:title" content="wedNESday #4"/>
+<meta property="og:description" content="Blender Brain* Split and Share I'm splitting the project wedNESday into a guide project. Unfortunelly, it does not have a catch name yet. The goal of this sidekick project is to serve as a lighthouse for thouse who attempt to create an emulator. It's filled with abstract test case scenarios …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://gutomaia.net/wednesday_4.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2017-01-25 23:00:00-02:00"/>
+<meta property="article:modified_time" content="2017-01-28 17:35:00-02:00"/>
+<meta property="article:author" content="https://gutomaia.net/author/guto-maia.html">
+<meta property="article:section" content="nes"/>
+<meta property="article:tag" content="nes"/>
+<meta property="article:tag" content="emulator"/>
+<meta property="article:tag" content="python"/>
+<meta property="og:image" content="https://s.gravatar.com/avatar/760d34405db2c028a3fb099a4510d870?s=100">
+
+  <title>gutomaia &ndash; wedNESday #4</title>
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-8039666399992046",
+      enable_page_level_ads: true
+    });
+  </script>
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://gutomaia.net">
+        <img src="https://s.gravatar.com/avatar/760d34405db2c028a3fb099a4510d870?s=100" alt="gutomaia" title="gutomaia">
+      </a>
+      <h1><a href="https://gutomaia.net">gutomaia</a></h1>
+
+<p>Pythonist with a NES and an ☂</p>
+      <nav>
+        <ul class="list">
+
+          <li><a href="/pyNES" target="_blank">pyNES</a></li>
+          <li><a href="/nodeNES" target="_blank">nodeNES</a></li>
+          <li><a href="/TylerD" target="_blank">TylerD</a></li>
+          <li><a href="/wedNESday/0.0.x" target="_blank">wedNESday</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-twitter" href="http://twitter.com/gutomaia" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-github" href="http://github.com/gutomaia" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-linkedin" href="http://linkedin.com/in/gutomaia" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <ins class="adsbygoogle ads-responsive"
+           data-ad-client="ca-pub-8039666399992046"
+           data-ad-slot="2727902218"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+
+<article class="single">
+  <header>
+    <h1 id="wednesday_4">wedNESday #4</h1>
+    <p>
+          Posted on Wed 25 January 2017 in <a href="https://gutomaia.net/category/nes.html">nes</a>
+
+
+    </p>
+  </header>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle ads-responsive"
+         data-ad-client="ca-pub-8039666399992046"
+         data-ad-slot="2588301415"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+  <div>
+    <div class="figure align-center">
+<img alt="Blender Brain" src="https://gutomaia.net/images/blender_brain.jpg" />
+<p class="caption">Blender Brain*</p>
+</div>
+<div class="section" id="split-and-share">
+<h2>Split and Share</h2>
+<p>I'm splitting the project wedNESday into a guide project. Unfortunelly, it does not have a catch name yet. The goal of this sidekick project is to serve as a lighthouse for thouse who attempt to create an emulator. It's filled with abstract test case scenarios. Well, for now the sameone I already have on wedNESday (yep, mostly,just copy and clip).</p>
+</div>
+<div class="section" id="the-real-deal">
+<h2>The Real Deal</h2>
+<p>As I had more time, due to a local holiday, I've spent a lot of time with an actual 6502 microprocessor, thanks to <a class="reference external" href="https://twitter.com/salexkidd">Toshimitsu Kamei</a>, who bought that for me sended it to Brazil from Japan. The MPU is a <a class="reference external" href="http://datasheets.chipdb.org/Western%20Design/W65C02S.pdf">W65C02S</a>. I'm using the RaspberryPi's GPIO to interract with it. So far, haven't done much. Still reading the manual and how to actially send and data and memory addresses. Also dealing with pinout flags, to understand when I should read from data and address and when I should write.</p>
+<div class="section" id="trivia-fact">
+<h3>Trivia fact</h3>
+<ul class="simple">
+<li>Matt Groening's Futurama showed that Blender uses a 6502 CPU.</li>
+</ul>
+<div class="figure align-center">
+<img alt="Futurama" src="https://gutomaia.net/images/futurama.jpg" />
+</div>
+</div>
+</div>
+<div class="section" id="next-wednesday">
+<h2>Next wedNESday</h2>
+<blockquote>
+<ul class="simple">
+<li>Don't know yet. I'll certainly have less time available this week. How about some GUI?</li>
+</ul>
+</blockquote>
+</div>
+
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://gutomaia.net/tag/nes.html">nes</a>
+      <a href="https://gutomaia.net/tag/emulator.html">emulator</a>
+      <a href="https://gutomaia.net/tag/python.html">python</a>
+    </p>
+  </div>
+
+
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle ads-responsive"
+         data-ad-client="ca-pub-8039666399992046"
+         data-ad-slot="4065034611"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+</article>
+
+    <footer>
+<p>&copy; Guto Maia 2024</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-32666248-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " gutomaia ",
+  "url" : "https://gutomaia.net",
+  "image": "https://s.gravatar.com/avatar/760d34405db2c028a3fb099a4510d870?s=100",
+  "description": ""
+}
+</script>
+</body>
+</html>
